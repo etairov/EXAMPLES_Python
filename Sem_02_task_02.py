@@ -6,19 +6,19 @@
 
 a = int(input("Введите положительное число: "))
 count = 3
-fibonachi = -1
+fibonachi = 1
 c = 1
 d = 1
 while fibonachi < a:
     fibonachi = c + d
-c = d
-d = fibonachi
-count += 1
+    c = d
+    d = fibonachi
+    count += 1
 
 if fibonachi == a:
     print(count)
 else:
-print(-1)
+    print('-1')
 # ----------------------------------
 
 n = int(input("Введите число "))
@@ -27,13 +27,13 @@ k = 1
 b = 1
 while b < n + 2:
     m = k + c
-k = c
-c = m
-b = b + 1
+    k = c
+    c = m
+    b = b + 1
 if m == n:
     print(b)
-break
-else: print("-1")
+else:
+    print("-1")
 # ------------------------------------------------------------------
 
 # Обратное решение- поиск числа Фибоначчи по заданному номеру числа
@@ -45,4 +45,4 @@ def fib(n):
     else:
         return fib(n - 1) + fib(n - 2)
 print(fib(int(input("Введите число n: "))))
-# -------------------------------------------
+#-------------------------------------------
