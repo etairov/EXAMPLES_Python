@@ -6,3 +6,22 @@
 #Input: 6 -> -20 30 -40 50 10 -10 Output: 2
 #-------------------------------------------
 
+from random import randint
+
+n = int(input("Введите количество дней от 1 до 100: "))
+count = 0
+days = 0
+maxDays = 0
+while count < n:
+    temp = randint(-50, 50)
+    if temp > 0:
+        days += 1
+
+    if maxDays < days:
+        maxDays = days
+
+    else:
+        days = 0
+        print(temp, end=" ")
+        count += 1
+print(f"Максимальная оттепель = {maxDays}")
