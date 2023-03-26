@@ -41,5 +41,5 @@ print(data)
 result_set = set()
 for elem in data:
     for value in elem.values():
-    result_set.add(value.strip())
+        result_set.add(value.strip())
 print(result_set)
