@@ -32,12 +32,12 @@ def find_phone_number(reader):
     for elem in filter(lambda x: x[2] == phone, reader):
         print(f' Фамилия: {elem[0]}\n Имя: {elem[1]}\n Номер телефона: {elem[2]}\n Комментарий: {elem[3]}\n')
 def add_abonent():
-    with open('phonebook.csv', 'a', encoding='utf-8', newline='') as out_file:
+    with open('Sem_08_phonebook.csv', 'a', encoding='utf-8', newline='') as out_file:
         info = input('Введите данные абонента: ').split()
         csv.writer(out_file).writerow(info)
 
 for elem in iter(input, '6'):
-    with open('phonebook.csv', 'r', encoding='utf-8') as file:
+    with open('Sem_08_phonebook.csv', 'r', encoding='utf-8') as file:
         reader = csv.reader(file)
 
         if elem == '1':
